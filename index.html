@@ -5,14 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>YourName_CV</title>
   
 </head>
 <body class="row">
 
     <header class="header" >
-        <div class="container nav">
-            <div style="flex: 3;"  >
+        <div class="headercontainer nav">
+            <div style="flex: 3;"  class="title" >
                 <h1 class="name">Umwari Rachel</h1>
                 <h2 class="level">Senior Product Designer</h2>    
             </div>
@@ -183,16 +185,17 @@
     </div>
 
     <script>
-        const header = document.querySelector(".header")
-        const nav = document.querySelector(".nav")
-        header.addEventListener('click',()=>{
+        const title = document.querySelector(".title")
+        const name = document.querySelector(".name")
+        const level = document.querySelector(".level")
+        title.addEventListener('click',()=>{
             var x = Math.floor(Math.random() * 256);
             var y = Math.floor(Math.random() * 256);
             var z = Math.floor(Math.random() * 256);
             var bgColor = "rgb(" + x + "," + y + "," + z + ")";
         
-            header.style = `background-color:${bgColor}`
-            nav.style = `background-color:${bgColor}`
+            name.style = `color:${bgColor}`
+            level.style = `color:${bgColor}`
             })
     </script>
 </body>
